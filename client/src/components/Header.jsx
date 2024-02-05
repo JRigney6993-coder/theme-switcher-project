@@ -1,13 +1,13 @@
 import { useTheme } from '../context/ThemeContext';
 
 const Header = () => {
-  const { theme, toggleTheme } = useTheme();
+  const { toggleTheme } = useTheme();
 
   return (
-    <header className={`bg-gray-100 ${theme === 'dark' ? 'dark:bg-gray-800' : ''} text-black dark:text-white p-5`}>
-      <h1>WeeeWooo</h1>
-      <button onClick={toggleTheme} className="py-2 px-4 bg-blue-500 text-white rounded hover:bg-blue-700 transition duration-300">
-        Toggle Theme
+    <header className="bg-purple-800 text-white p-6 flex justify-between items-center">
+      <h1 className="text-lg font-bold">WeeeWooo</h1>
+      <button onClick={toggleTheme} className="py-2 px-4 bg-purple-900 hover:bg-purple-700 rounded transition duration-300">
+        Dark/Light
       </button>
     </header>
   );

@@ -5,14 +5,15 @@ import Footer from './components/Footer';
 import Navbar from './components/Navbar';
 import MainContent from './components/MainContent';
 
-
 function App() {
   return (
     <ThemeProvider>
-      <div className="App">
+      <div className="flex flex-col min-h-screen">
         <Header />
         <Navbar />
-        <MainContent />
+        <div className="flex-grow bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100">
+          <MainContent />
+        </div>
         <Footer />
       </div>
     </ThemeProvider>
